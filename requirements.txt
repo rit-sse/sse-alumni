@@ -1,1 +1,2 @@
+Flask==0.12.2
 pystache==0.5.4
