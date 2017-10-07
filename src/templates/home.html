@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% block nav %}
+  <a class="nav-link active" href="/home">Home</a>
+  <a class="nav-link" href="/search">Search</a>
+  <a class="nav-link" href="/login">Login</a>
+{% endblock %}
+
 {% block content %}
-  <h1>homepage hype</h1>
+<div class="inner cover">
+  <h1 class="cover-heading">See Where the SSE has gone.</h1>
+  <p class="lead">
+  We should put some kind of subtitle content here. I dunno,
+  I'll just leave this here as a placeholder for now I guess.
+  </p>
+  <p class="lead">
+  <a href="http://getbootstrap.com/docs/4.0/examples/cover/#" class="btn btn-lg btn-secondary">Learn more</a>
+  </p>
+</div>
 {% endblock %}
