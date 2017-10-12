@@ -1,2 +1,3 @@
 Flask==0.12.2
 pystache==0.5.4
+requests==2.18.4
