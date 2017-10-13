@@ -1,14 +1,19 @@
-How to get up and running:
+# SSE-Member
+
+An alumni tracking system
+
+[![CircleCI](https://circleci.com/gh/rit-sse/sse-member/tree/master.svg?style=svg)](https://circleci.com/gh/rit-sse/sse-member/tree/master)
+
+## Getting Started
 
 1) Install Docker at docker.com
 2) run `git clone LINK` replacing LINK with the github link
 3) open a terminal/command window and navigate to where you cloned the directory
 4) run `docker-compose up`
-5) visit localhost:5000 to view the site. 
-
+5) visit localhost:5000 in your browser to view the site. 
 
 If you make any changes to a python file, you will need to restart the docker container. Go the terminal
 window and clikc CNTL+C, then run the command again
 
-If you make a change to an html/css/js file, you do not need to restart the server. Simply
+If you make a change to a css or js file, you do not need to restart the server. Simply
 refresh the page and you will see you changes.
