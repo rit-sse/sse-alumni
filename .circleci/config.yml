@@ -1,8 +1,48 @@
 version: 2
 jobs:
-   build:
-     docker:
-       - image: circleci/python:3.6.1
-     steps:
-       - checkout
-       - run: echo "hello world"
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -f Dockerfile.build -t ritsse/sse-member:"$CIRCLE_SHA1" .
+      - run:
+          name: Run tests
+          command: |
+            docker run -e FLASK_CONFIG=testing ritsse/sse-member:"$CIRCLE_SHA1"
+      - run:
+          name: Push application Docker image
+          command: |
+            docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              TAG=$CIRCLE_SHA1
+              docker tag ritsse/sse-member:$TAG ritsse/sse-member:latest;
+              docker push ritsse/sse-member:$TAG;
+              docker push ritsse/sse-member:latest;
+              JOB=dev_deploy
+            fi
+            curl --user ${CIRCLE_API_TOKEN}: \
+                --data build_parameters[CIRCLE_JOB]=$JOB \
+                --data build_parameters[BUILD_TAG]=$TAG\
+                --data revision=$CIRCLE_SHA1 \
+                https://circleci.com/api/v1.1/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/tree/$CIRCLE_BRANCH
+
+  deploy:
+    machine: true
+    working_directory: ~/members
+    steps:
+      - add_ssh_keys
+      - deploy:
+          command: |
+            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-member:$BUILD_TAG members_web --detach=false
+
+  dev_deploy:
+    machine: true
+    working_directory: ~/members
+    steps:
+      - add_ssh_keys
+      - deploy:
+          command: |
+            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-member:$BUILD_TAG members_dev_web --detach=false

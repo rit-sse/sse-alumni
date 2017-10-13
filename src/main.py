@@ -1,8 +1,7 @@
 import jinja2
 from consts import *
-import flask
 from flask import Flask, render_template, send_from_directory, request
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 def render(page):
     print(request.path)
@@ -11,18 +10,18 @@ def render(page):
     if not page in getPages(loader):
         return '404'
     else:
-        return flask.render_template(page + '.html', name=page)
+        return render_template(page + '.html', name=page)
 
-@app.route("/")
+@app.route("/members/")
 def index():
     return render('home')
 
 
-@app.route("/<route>")
+@app.route("/members/<route>")
 def router(route):
     return render(route)
 
-@app.route('/res/<path:path>')
+@app.route('/members/res/<path:path>')
 def static_resources(path):
     print(STATIC_PATH)
-    return flask.send_from_directory(STATIC_PATH, path)
+    return send_from_directory(STATIC_PATH, path)
