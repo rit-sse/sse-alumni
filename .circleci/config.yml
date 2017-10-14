@@ -1,11 +1,12 @@
 version: 2
 
-machine:
-  services:
-    - docker
+
 
 jobs:
   build:
+    machine:
+      services:
+        - docker
     steps:
       - checkout
       - setup_remote_docker
