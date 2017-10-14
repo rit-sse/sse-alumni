@@ -7,17 +7,17 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker build -t FILL/sse-member:"$CIRCLE_SHA1" .
+            docker build -t ritsse/sse-member:"$CIRCLE_SHA1" .
       - run:
           name: Run tests
           command: |
-            docker run -e FLASK_CONFIG=testing FILL/sse-member:"$CIRCLE_SHA1"
+            docker run -e FLASK_CONFIG=testing ritsse/sse-member:"$CIRCLE_SHA1"
       - run:
           name: Push application Docker image
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-              docker tag FILL/sse-member:"$CIRCLE_SHA1" FILL/sse-member:latest;
-              docker push FILL/sse-member:"$CIRCLE_SHA1";
-              docker push FILL/sse-member:latest;
+              docker tag ritsse/sse-member:"$CIRCLE_SHA1" ritsse/sse-member:latest;
+              docker push ritsse/sse-member:"$CIRCLE_SHA1";
+              docker push ritsse/sse-member:latest;
             fi
