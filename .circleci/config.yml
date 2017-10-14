@@ -1,29 +1,21 @@
-version: 2
+machine:
+  services:
+    - docker
 
+dependencies:
+  override:
+    - docker info
+    - docker build -t FILL/sse-member:"$CIRCLE_SHA1" .
 
+test:
+  override:
+    - docker run -e FLASK_CONFIG=testing FILL/sse-member:"$CIRCLE_SHA1"
 
-jobs:
-  build:
-    machine:
-      services:
-        - docker
-    steps:
-      - checkout
-      - setup_remote_docker
-      - run:
-          name: Build application Docker image
-          command: |
-            docker build -t FILL/sse-member:"$CIRCLE_SHA1" .
-      - run:
-          name: Run tests
-          command: |
-            docker run -e FLASK_CONFIG=testing FILL/sse-member:"$CIRCLE_SHA1"
-      - deploy:
-          name: Push application Docker image
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-              docker tag FILL/sse-member:"$CIRCLE_SHA1" FILL/sse-member:latest;
-              docker push FILL/sse-member:"$CIRCLE_SHA1";
-              docker push FILL/sse-member:latest;
-            fi
+deployment:
+  hub:
+    branch: master
+    commands:
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      - docker tag FILL/sse-member:"$CIRCLE_SHA1" FILL/sse-member:latest;
+      - docker push FILL/sse-member:"$CIRCLE_SHA1";
+      - docker push FILL/sse-member:latest;
