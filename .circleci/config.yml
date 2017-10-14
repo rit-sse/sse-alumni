@@ -1,4 +1,9 @@
 version: 2
+
+machine:
+  services:
+    - docker
+
 jobs:
   build:
     steps:
