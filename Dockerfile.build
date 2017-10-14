@@ -2,15 +2,11 @@ FROM python:3.6
 
 WORKDIR /usr/app
 
-ADD requirements.txt .
-
-RUN pip install -r requirements.txt
-
-ADD start.sh .
+ADD . .
 
 RUN chmod a+x start.sh
 
-ADD ./test test/
+RUN pip install -r requirements.txt
 
 ENV FLASK_APP=main.py
 

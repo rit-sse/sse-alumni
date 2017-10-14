@@ -7,5 +7,7 @@ services:
       context: .
     volumes:
       - ./src:/usr/app/src
+    environment:
+      - FLASK_CONFIG=none
     ports:
       - "5000:5000"
