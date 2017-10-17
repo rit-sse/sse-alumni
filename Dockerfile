@@ -14,4 +14,6 @@ ADD ./test test/
 
 ENV FLASK_APP=main.py
 
+ENV ENV=docker
+
 ENTRYPOINT [ "./start.sh" ]
