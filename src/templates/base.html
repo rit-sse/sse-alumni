@@ -21,7 +21,7 @@
             <div class="inner">
               <h3 class="masthead-brand">SSE Alumni Directory</h3>
               <nav class="nav nav-masthead">
-                <a class="nav-link{% if request.path == '/members/home' or request.path == '/members'%} active{% endif %}" href="/home">Home</a>
+                <a class="nav-link{% if request.path == '/members/home' or request.path == '/' or request.path == '/members'%} active{% endif %}" href="/members">Home</a>
                 <a class="nav-link{% if request.path == '/members/search' %} active{% endif %}" href="/members/search">Search</a>
                 <a class="nav-link{% if request.path == '/members/login' %} active{% endif %}" href="/members/login">Login</a>
                 <!--{% block nav %}{% endblock %}-->
