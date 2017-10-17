@@ -21,4 +21,3 @@ refresh the page and you will see you changes.
 ## To Run tests
 In docker-compose.yml set `FLASK_CONFIG=testing`, then run docker-compose up --build
 To revert back to running the server, set `FLASK_CONFIG=none`
-
