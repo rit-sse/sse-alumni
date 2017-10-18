@@ -8,11 +8,15 @@ An alumni tracking system
 
 ### ...With Docker
 
+## Mac
 1. Install Docker at docker.com
 2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
 4. run `docker-compose up`
 5. visit localhost:5000/members in your browser to view the site.
+
+## Windows
+https://gist.github.com/akath20/83f6e78f1b4df1c54cb455bc36aa94e4
 
 ### ...Without Docker on *nix
 
