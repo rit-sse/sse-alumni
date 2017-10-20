@@ -10,7 +10,7 @@ An alumni tracking system
 
 ## Mac
 1. Install Docker at docker.com
-2. run `git clone ` [a relative link](1) replacing LINK with the github link
+2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
 4. run `docker-compose up`
 5. visit localhost:5000/members in your browser to view the site.
