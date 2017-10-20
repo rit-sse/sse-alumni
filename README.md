@@ -10,13 +10,22 @@ An alumni tracking system
 
 ## Mac
 1. Install Docker at docker.com
-2. run `git clone LINK` replacing LINK with the github link
+2. run `git clone ` [a relative link](1) replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
 4. run `docker-compose up`
 5. visit localhost:5000/members in your browser to view the site.
 
 ## Windows
-https://gist.github.com/akath20/83f6e78f1b4df1c54cb455bc36aa94e4
+If you haven't already installed Docker before, you can skip step 1.
+
+1. Uninstall Docker. On Windows Start Menu Search, search “uninstall” and click the first option. Scroll until you find “Docker for Windows” and uninstall it. 
+2. In Windows Start Menu Search, search “windows features” and click the first option. Scroll down until you See “Hyper-V” and uncheck it. It may already be unchecked. (More help: http://www.poweronplatforms.com/enable-disable-hyper-v-windows-10-8/)
+3. Reboot Machine
+4. Download Docker Toolbox for Windows  available here https://www.docker.com/products/docker-toolbox
+5. Once fully installed, go to Windows Search, type “Docker” and click Docker Terminal QuickStart. Let it do it’s thing and after installed, you will have a command prompt.
+6. Use it as you normally would. cd to our project, run `docker-compose up` and it should build and be good to go!
+7. The server should be running. Open Kitematic (search for it). If prompted, click "use VirtualBox". You should see sse-member on the left side. Click it, then click ports. You should see numbers like 169.168.x.x:5000 (it will be different). Copy that to your brower and you should see our page! You should actually see a 404, which is good! Append /members to the end and you will see our alumni home page!
+
 
 ### ...Without Docker on *nix
 
