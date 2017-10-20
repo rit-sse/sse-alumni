@@ -12,6 +12,7 @@ An alumni tracking system
 
 <details>
 <summary>Instructions</summary>
+    
 1. Install Docker at docker.com
 2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
@@ -23,6 +24,7 @@ An alumni tracking system
 
 <details>
 <summary>Instructions</summary>
+    
 1. Install python 3 if it hasn't already been installed (also installs pip) `brew install python3`
 2. `cd` into the folder where you plan on developing
 3. `git clone <repo>`, where `<repo>` is the clone url
@@ -38,6 +40,7 @@ An alumni tracking system
 
 <details>
 <summary>Instructions</summary>
+    
 1. Install Docker at docker.com
 2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
@@ -49,6 +52,7 @@ An alumni tracking system
 
 <details>
 <summary>Instructions</summary>
+    
 1. Install python 3 and pip if it hasn't already been installed `sudo apt-get -y install python3 python3-pip`
 2. `cd` into the folder where you plan on developing
 3. `git clone <repo>`, where `<repo>` is the clone url
@@ -64,6 +68,7 @@ An alumni tracking system
 
 <details>
 <summary>Instructions</summary>
+    
 If you haven't already installed Docker before, you can skip step 1.
 
 1. Uninstall Docker. On Windows Start Menu Search, search “uninstall” and click the first option. Scroll until you find “Docker for Windows” and uninstall it. 
@@ -79,6 +84,7 @@ If you haven't already installed Docker before, you can skip step 1.
 
 <details>
 <summary>Instructions</summary>
+    
 1. Install the lastest version of [Python 3](https://www.python.org/downloads/release/python-363/), making sure to tick the checkbox to add Python to your PATH on the first page of the install wizard.
 2. Install pip, the Python package manager:
     1. Download the [get-pip.py](https://bootstrap.pypa.io/get-pip.py) script to your computer
