@@ -8,6 +8,8 @@ An alumni tracking system
 
 ## Mac
 
+### With Docker on Mac
+
 <details>
 <summary>Instructions</summary>
 1. Install Docker at docker.com
@@ -32,6 +34,8 @@ An alumni tracking system
 
 ## Linux
 
+### With Docker on Linux
+
 <details>
 <summary>Instructions</summary>
 1. Install Docker at docker.com
@@ -55,6 +59,8 @@ An alumni tracking system
 </details>
     
 ## Windows
+
+### With Docker on Windows
 
 <details>
 <summary>Instructions</summary>
@@ -87,7 +93,8 @@ If you haven't already installed Docker before, you can skip step 1.
 9. Run the project with ` FLASK_APP=src/main.py ENV=windows python -m flask run`
 10. Stop the server with `CTRL+c`
 </details>
-    
+   
+# 
 If you make any changes to a python file, you will need to restart the docker container. Go the terminal
 window and click CTRL-C, then run the command again
 
