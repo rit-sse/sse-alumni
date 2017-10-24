@@ -4,8 +4,6 @@
 
 An alumni tracking system
 
-test
-<<<<<<< HEAD
 ## Getting Started
 
 1) Install Docker at docker.com
@@ -16,7 +14,7 @@ test
 
 If you make any changes to a python file, you will need to restart the docker container. Go the terminal
 window and clikc CTRL-C, then run the command again
-=======
+
 ## Getting Started...
 
 ## Mac
@@ -25,7 +23,7 @@ window and clikc CTRL-C, then run the command again
 
 <details>
 <summary>Instructions</summary>
-    
+
 1. Install Docker at docker.com
 2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
@@ -37,7 +35,7 @@ window and clikc CTRL-C, then run the command again
 
 <details>
 <summary>Instructions</summary>
-    
+
 1. Install python 3 if it hasn't already been installed (also installs pip) `brew install python3`
 2. `cd` into the folder where you plan on developing
 3. `git clone <repo>`, where `<repo>` is the clone url
@@ -53,7 +51,7 @@ window and clikc CTRL-C, then run the command again
 
 <details>
 <summary>Instructions</summary>
-    
+
 1. Install Docker at docker.com
 2. run `git clone LINK` replacing LINK with the github link
 3. open a terminal/command window and navigate to where you cloned the directory
@@ -65,7 +63,7 @@ window and clikc CTRL-C, then run the command again
 
 <details>
 <summary>Instructions</summary>
-    
+
 1. Install python 3 and pip if it hasn't already been installed `sudo apt-get -y install python3 python3-pip`
 2. `cd` into the folder where you plan on developing
 3. `git clone <repo>`, where `<repo>` is the clone url
@@ -74,17 +72,17 @@ window and clikc CTRL-C, then run the command again
 6. Run the project with `FLASK_APP=src/main.py ENV=windows python -m flask run`
 7. Stop the server with `CTRL+c`
 </details>
-    
+
 ## Windows
 
 ### With Docker on Windows
 
 <details>
 <summary>Instructions</summary>
-    
+
 If you haven't already installed Docker before, you can skip step 1.
 
-1. Uninstall Docker. On Windows Start Menu Search, search “uninstall” and click the first option. Scroll until you find “Docker for Windows” and uninstall it. 
+1. Uninstall Docker. On Windows Start Menu Search, search “uninstall” and click the first option. Scroll until you find “Docker for Windows” and uninstall it.
 2. In Windows Start Menu Search, search “windows features” and click the first option. Scroll down until you See “Hyper-V” and uncheck it. It may already be unchecked. (More help: http://www.poweronplatforms.com/enable-disable-hyper-v-windows-10-8/)
 3. Reboot Machine
 4. Download Docker Toolbox for Windows  available here https://www.docker.com/products/docker-toolbox
@@ -97,7 +95,7 @@ If you haven't already installed Docker before, you can skip step 1.
 
 <details>
 <summary>Instructions</summary>
-    
+
 1. Install the lastest version of [Python 3](https://www.python.org/downloads/release/python-363/), making sure to tick the checkbox to add Python to your PATH on the first page of the install wizard.
 2. Install pip, the Python package manager:
     1. Download the [get-pip.py](https://bootstrap.pypa.io/get-pip.py) script to your computer
@@ -112,11 +110,11 @@ If you haven't already installed Docker before, you can skip step 1.
 9. Run the project with ` FLASK_APP=src/main.py ENV=windows python -m flask run`
 10. Stop the server with `CTRL+c`
 </details>
-   
-# 
+
+#
 If you make any changes to a python file, you will need to restart the docker container. Go the terminal
 window and click CTRL-C, then run the command again
->>>>>>> 82880e6c48c28d620816e0fb3d7b215c08f1061f
+
 
 If you make a change to a css or js file, you do not need to restart the server. Simply
 refresh the page and you will see you changes.
