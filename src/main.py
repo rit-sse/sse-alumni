@@ -12,16 +12,16 @@ def render(page):
     else:
         return render_template(page + '.html', name=page)
 
-@app.route("/")
+@app.route("/members/")
 def index():
     return render('home')
 
 
-@app.route("/<route>")
+@app.route("/members/<route>")
 def router(route):
     return render(route)
 
-@app.route('/res/<path:path>')
+@app.route('/members/res/<path:path>')
 def static_resources(path):
     print(STATIC_PATH)
     return send_from_directory(STATIC_PATH, path)
