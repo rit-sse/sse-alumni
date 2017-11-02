@@ -4,7 +4,6 @@
 
 An alumni tracking system
 
-<<<<<<< HEAD
 ## Getting Started
 
 1) Install Docker at docker.com
@@ -13,9 +12,6 @@ An alumni tracking system
 4) run `docker-compose up`
 5) visit localhost:5000 in your browser to view the site.
 
-If you make any changes to a python file, you will need to restart the docker container. Go the terminal
-window and clikc CTRL-C, then run the command again
-=======
 ## Getting Started...
 
 ## Mac
@@ -112,10 +108,8 @@ If you haven't already installed Docker before, you can skip step 1.
 10. Stop the server with `CTRL+c`
 </details>
    
-# 
-If you make any changes to a python file, you will need to restart the docker container. Go the terminal
-window and click CTRL-C, then run the command again
->>>>>>> 82880e6c48c28d620816e0fb3d7b215c08f1061f
+NOTE: If you make any changes to a python file, you will need to restart the docker container.
+Go the terminal window and click CTRL-C, then run the command again
 
 If you make a change to a css or js file, you do not need to restart the server. Simply
 refresh the page and you will see you changes.
