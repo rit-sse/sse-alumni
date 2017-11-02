@@ -4,7 +4,6 @@
 
 An alumni tracking system
 
-<<<<<<< HEAD
 ## Getting Started
 
 1) Install Docker at docker.com
@@ -115,7 +114,6 @@ If you haven't already installed Docker before, you can skip step 1.
 # 
 If you make any changes to a python file, you will need to restart the docker container. Go the terminal
 window and click CTRL-C, then run the command again
->>>>>>> 82880e6c48c28d620816e0fb3d7b215c08f1061f
 
 If you make a change to a css or js file, you do not need to restart the server. Simply
 refresh the page and you will see you changes.
