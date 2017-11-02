@@ -12,9 +12,9 @@ An alumni tracking system
 4) run `docker-compose up`
 5) visit localhost:5000 in your browser to view the site.
 
-If you make any changes to a python file, you will need to restart the docker container. Go the terminal
-window and clikc CTRL-C, then run the command again
-=======
+NOTE: If you make any changes to a python file, you will need to restart the docker container.
+Go the terminal window and click CTRL-C, then run the command again
+
 ## Getting Started...
 
 ## Mac
