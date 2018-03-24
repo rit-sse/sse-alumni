@@ -7,20 +7,20 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker build -t ritsse/sse-member:"$CIRCLE_SHA1" -f Dockerfile.build .
+            docker build -t ritsse/sse-alumni:"$CIRCLE_SHA1" -f Dockerfile.build .
       - run:
           name: Run tests
           command: |
-            docker run -e FLASK_CONFIG=testing ritsse/sse-member:"$CIRCLE_SHA1"
+            docker run -e FLASK_CONFIG=testing ritsse/sse-alumni:"$CIRCLE_SHA1"
       - run:
           name: Push application Docker image
           command: |
             docker login -u="$DOCKER_USER" -p="$DOCKER_PASS";
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               TAG=$CIRCLE_SHA1
-              docker tag ritsse/sse-member:$TAG ritsse/sse-member:latest;
-              docker push ritsse/sse-member:$TAG;
-              docker push ritsse/sse-member:latest;
+              docker tag ritsse/sse-alumni:$TAG ritsse/sse-alumni:latest;
+              docker push ritsse/sse-alumni:$TAG;
+              docker push ritsse/sse-alumni:latest;
               JOB=dev_deploy
               curl --user ${CIRCLE_API_TOKEN}: \
                 --data build_parameters[CIRCLE_JOB]=$JOB \
@@ -37,7 +37,7 @@ jobs:
       - add_ssh_keys
       - deploy:
           command: |
-            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-member:$BUILD_TAG members_web --detach=false
+            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-alumni:$BUILD_TAG alumni_web --detach=false
 
   dev_deploy:
     machine: true
@@ -46,4 +46,4 @@ jobs:
       - add_ssh_keys
       - deploy:
           command: |
-            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-member:$BUILD_TAG members_dev_web --detach=false
+            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-alumni:$BUILD_TAG alumni_dev_web --detach=false
