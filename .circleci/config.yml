@@ -46,4 +46,4 @@ jobs:
       - add_ssh_keys
       - deploy:
           command: |
-            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-alumni:$BUILD_TAG alumni_dev_web --detach=false
+            ssh deployer@eggs.se.rit.edu docker service update --image=ritsse/sse-alumni:$BUILD_TAG alumni_dev_web_dev --detach=false
