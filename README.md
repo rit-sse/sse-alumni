@@ -1,6 +1,6 @@
 # SSE-Member
 
-[![CircleCI](https://circleci.com/gh/rit-sse/sse-member/tree/master.svg?style=svg)](https://circleci.com/gh/rit-sse/sse-member/tree/master)
+[![CircleCI](https://circleci.com/gh/rit-sse/sse-alumni/tree/master.svg?style=svg)](https://circleci.com/gh/rit-sse/sse-alumni/tree/master)
 
 An alumni tracking system
 
