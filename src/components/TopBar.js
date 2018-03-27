@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class TopBar extends Component {
   render() {
@@ -8,9 +8,9 @@ class TopBar extends Component {
             <div class="inner">
                 <h3 class="masthead-brand">SSE Alumni Directory</h3>
                 <nav class="nav nav-masthead">
-                    <Link class="nav-link" to='/home'>Home</Link>
-                    <Link class="nav-link" to='/search'>Search</Link>
-                    <Link class="nav-link" to='/login'>Login</Link>
+                    <NavLink className="nav-link" exact to='/home'>Home</NavLink>
+                    <NavLink className="nav-link" exact to='/search'>Search</NavLink>
+                    <NavLink className="nav-link" exact to='/login'>Login</NavLink>
                 </nav>
             </div>
         </div>
