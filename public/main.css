@@ -92,7 +92,7 @@ body {
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
+a.nav-link.active {
   color: #fff;
   border-bottom-color: #fff;
 }
