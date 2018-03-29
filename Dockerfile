@@ -1,17 +1,26 @@
-FROM python:3.6
+FROM node
 
-WORKDIR /usr/app
+# Install and config nginx
+RUN apt-get update && apt-get install -y nginx
+RUN rm /etc/nginx/sites-enabled/*
+COPY ./nginx/ /etc/nginx/sites-enabled/
 
-ADD requirements.txt .
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log
+RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN pip install -r requirements.txt
+# Install node deps
+WORKDIR /app
+COPY ./package.json /app/package.json
+RUN npm install --warn
 
-ADD start.sh .
+# Build the app
+COPY ./ /app
+RUN npm run build
 
-RUN chmod a+x start.sh
+# Set perms for dist dir
+RUN chmod 755 -R /app/dist
 
-ADD ./test test/
-
-ENV FLASK_APP=main.py
-
-ENTRYPOINT [ "./start.sh" ]
+# Run nginx
+EXPOSE 80 443
+CMD ["nginx", "-g", "daemon off;"]
