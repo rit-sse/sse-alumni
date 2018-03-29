@@ -10,4 +10,3 @@ RUN npm run build
 FROM nginx
 RUN rm -rf /etc/nginx/sites-enabled/*
 COPY ./nginx/ /etc/nginx/conf.d/
-COPY --from=build /app/dist /app/dist
