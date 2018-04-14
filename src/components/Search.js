@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Search extends Component {
   render() {
     return (
-        <h1>hype you found the search page</h1>
+        <div>
+            <h3>Filter by</h3>
+        </div>
     );
   }
 }

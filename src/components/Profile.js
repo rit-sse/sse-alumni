@@ -8,66 +8,66 @@ class Login extends Component {
                 <tbody>
                 <tr id='odd'>
                     <td>
-                        <label class='lead'>First Name : </label>
+                        <label className='lead'>First Name : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input className='text' class='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='even'>
                     <td>
-                        <label class='lead'>Last Name : </label>
+                        <label className='lead'>Last Name : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='odd'>
                     <td>
-                        <label class='lead'>Company Name : </label>
+                        <label className='lead'>Company Name : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='even'>
                     <td>
-                        <label class='lead'>Position : </label>
+                        <label className='lead'>Position : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='odd'>
                     <td>
-                        <label class='lead'>Graduation Year : </label>
+                        <label className='lead'>Graduation Year : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='even'>
                     <td>
-                        <label class='lead'>Contact Email : </label>
+                        <label className='lead'>Contact Email : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='odd'>
                     <td>
-                        <label class='lead'>Contact Phone Number : </label>
+                        <label className='lead'>Contact Phone Number : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='even'>
                     <td>
-                        <label class='lead'>Major : </label>
+                        <label className='lead'>Major : </label>
                     </td>
                     <td>
-                        <input type='text' class='pull-right'></input><br/>
+                        <input type='text' className='pull-right'></input><br/>
                     </td>
                 </tr>
                 </tbody>

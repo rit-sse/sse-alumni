@@ -69,6 +69,8 @@ body {
 
 .masthead {
   margin-bottom: 2rem;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .masthead-brand {
@@ -159,7 +161,7 @@ a.nav-link.active {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 90%;
   }
 }
 table{
