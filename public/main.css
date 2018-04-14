@@ -162,3 +162,15 @@ a.nav-link.active {
     width: 42rem;
   }
 }
+table{
+  width: 100%;
+}
+tr{
+  text-align: left;
+}
+tr#even{
+  background-color: rgb(73, 73, 73);
+}
+input{
+  text-align: right;
+}

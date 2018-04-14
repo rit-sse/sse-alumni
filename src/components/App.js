@@ -6,6 +6,7 @@ import Home from './Home';
 import Search from './Search';
 import Login from './Login';
 import TopBar from './TopBar';
+import Profile from './Profile';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Route exact path='/home' component={Home}/>
                 <Route exact path='/search' component={Search}/>
                 <Route exact path='/login' component={Login}/>
+                <Route exact path='/profile' component={Profile}/>
                 <Route path='/' render={() => (<Redirect to="/home"/>)}/>
             </Switch>
         </div>
