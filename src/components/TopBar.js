@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 class TopBar extends Component {
+    addProfile(){
+        let isAuthenticated = true;
+        if (isAuthenticated){
+            return <NavLink className="nav-link" extract to='/profile'>Profile</NavLink>;
+        }
+    }
+
   render() {
     return (
         <div class="masthead clearfix">
@@ -11,6 +18,7 @@ class TopBar extends Component {
                     <NavLink className="nav-link" exact to='/home'>Home</NavLink>
                     <NavLink className="nav-link" exact to='/search'>Search</NavLink>
                     <NavLink className="nav-link" exact to='/login'>Login</NavLink>
+                    {this.addProfile()}
                 </nav>
             </div>
         </div>
