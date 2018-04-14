@@ -4,7 +4,6 @@ class Login extends Component {
   render() {
     return (
         <form>
-
             <table align='center'>
                 <tbody>
                 <tr id='odd'>
@@ -41,10 +40,10 @@ class Login extends Component {
                 </tr>
                 <tr id='odd'>
                     <td>
-                        <label class='lead'>Graduation Date : </label>
+                        <label class='lead'>Graduation Year : </label>
                     </td>
                     <td>
-                        <input type='date' class='pull-right'></input><br/>
+                        <input type='text' class='pull-right'></input><br/>
                     </td>
                 </tr>
                 <tr id='even'>
