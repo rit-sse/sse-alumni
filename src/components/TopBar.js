@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 class TopBar extends Component {
     addProfile(){
-        let isAuthenticated = true;
-        if (isAuthenticated){
+        let isAuthenticated = true; 
+        if (isAuthenticated){ //TODO: Once Auth is finished change this to that boolean
             return <NavLink className="nav-link" extract to='/profile'>Profile</NavLink>;
         }
     }
