@@ -6,6 +6,7 @@ import Home from './Home';
 import Search from './Search';
 import Login from './Login';
 import TopBar from './TopBar';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
                 <Route exact path='/login' component={Login}/>
                 <Route path='/' render={() => (<Redirect to="/home"/>)}/>
             </Switch>
+
+            <Footer />
         </div>
     );
   }
