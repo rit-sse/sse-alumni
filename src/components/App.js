@@ -7,8 +7,29 @@ import Search from './Search';
 import Login from './Login';
 import TopBar from './TopBar';
 
+import ReactDOM from 'react-dom';
+// import Root from './index';
+
+/*
+
+window.onload = () => {
+  gapi.load('auth2', () => {
+    ReactDOM.render(<Root />, document.getElementById('react'));
+  });
+};
+
+if (module.hot) {
+  module.hot.accept('./index', () => {
+    const NewRoot = require('./index').default; // eslint-disable-line global-require
+    ReactDOM.render(<NewRoot />, document.getElementById('react'));
+  });
+}
+
+*/
+
 class App extends Component {
   render() {
+  
     return (
         <div className="App">
 
