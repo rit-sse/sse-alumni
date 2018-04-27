@@ -1,0 +1,30 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 960px;
+    height: 500px;
+    position: relative;
+  }
+  /* stylesheet for your custom graph */
+  .states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+  }
+  .states-choropleth {
+    fill: #ccc;
+  }
+  #tooltip-container {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border: 1px solid;
+    display: none;
+  }
+  .tooltip_key {
+    font-weight: bold;
+  }
+  .tooltip_value {
+    margin-left: 20px;
+    float: right;
+  }
