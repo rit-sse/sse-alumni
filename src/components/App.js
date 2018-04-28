@@ -7,6 +7,7 @@ import Search from './Search';
 import Profiles from './Profiles'
 import Login from './Login';
 import TopBar from './TopBar';
+import Map from './Map'
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
                 <Route exact path='/search' component={Search}/>
                 <Route exact path='/profiles' component={Profiles}/>
                 <Route exact path='/login' component={Login}/>
+                <Route exact path='/map' component={Map}/>
+
                 <Route path='/' render={() => (<Redirect to="/home"/>)}/>
             </Switch>
         </div>
