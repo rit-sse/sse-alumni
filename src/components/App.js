@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
+import Profiles from './Profiles'
 import Login from './Login';
 import TopBar from './TopBar';
 
@@ -17,6 +18,7 @@ class App extends Component {
             <Switch>
                 <Route exact path='/home' component={Home}/>
                 <Route exact path='/search' component={Search}/>
+                <Route exact path='/profiles' component={Profiles}/>
                 <Route exact path='/login' component={Login}/>
                 <Route path='/' render={() => (<Redirect to="/home"/>)}/>
             </Switch>

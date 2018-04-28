@@ -9,6 +9,7 @@ class Home extends Component {
                 We should put some kind of subtitle content here. I dunno, I'll just leave this here as a placeholder for now I guess.
             </p>
             <p class="lead">
+                <a href="/profiles" class="btn btn-lg btn-secondary btn-login">Profiles</a>
                 <a href="/login" class="btn btn-lg btn-secondary btn-login">Login</a>
                 <a href="/search" class="btn btn-lg btn-secondary">Search</a>
             </p>
