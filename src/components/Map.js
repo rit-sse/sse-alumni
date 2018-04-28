@@ -2,32 +2,27 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-
-let alumni = [
-  {
-    lat: 37.0902,
-    lng: -122.4194,
-    name: "Derek Erdmann"
-  },
-  {
-    lat: 37.0902,
-    lng: -124.4194,
-    name: "Michael Timbrook"
-  }
-]
-
-
-
-
-
 class Map extends Component {
     static defaultProps = {
         center: {
           lat: 37.0902,
           lng: -95.7129
         },
-        zoom: 4
+        zoom: 3.8
       };
+
+      state = {
+        alumni: [
+          {
+            lat: new Number(37.0902),
+            lng: -122.4194,
+          },
+          {
+            lat: new Number(37.0902),
+            lng: -124.4194,
+          }
+        ]
+      }
 
 
 
@@ -35,11 +30,22 @@ class Map extends Component {
         e.preventDefault();
         const { address, name } =  this.refs;
         const key = "AIzaSyBhgwDn93qxpxT9VBR-CTXA4m4qtgN--JY";
+        console.log(address);
 
-        fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=${key}`)
+        fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address.value}&key=${key}`)
         .then((response) => response.json())
         .then((responseJson) => {
-          return responseJson.movies;
+          console.log(responseJson.results[0].geometry.location.lat);
+          this.setState({
+            alumni: [
+              ...this.state.alumni,
+              {
+                lat: new Number(responseJson.results[0].geometry.location.lat),
+                lng: new Number (responseJson.results[0].geometry.location.lng)
+              }
+            ]
+          })
+          console.log(this.state.alumni);
         })
         .catch((error) => {
           console.error(error);
@@ -51,42 +57,16 @@ class Map extends Component {
   render() {
     return (
       <div className="container-fluid" style={{ height: '95vh', paddingTop: '2.5vh' }}>
-
             <div className="row">
-            <div className="col-6" style={{ paddingLeft: 0 }}>
+            <div className="col-8" style={{ paddingLeft: 0 }}>
            <div style={{ height: '95vh'}}>
               <GoogleMapReact
+                key={this.state.alumni.length}
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}
                 heatmapLibrary={true}
                 heatmap={{
-                  positions: [
-                    {
-                      lat: 37.0902,
-                      lng: -97.7129,
-                    },
-                    {
-                      lat: 37.0902,
-                      lng: -97.7129,
-                    },
-                    {
-                      lat: 37.7749,
-                      lng: -122.4194,
-                    },
-                    {
-                      lat: 37.7749,
-                      lng: -122.4194,
-                    },
-                    {
-                      lat: 37.7749,
-                      lng: -122.4194,
-                    },
-                    {
-                      lat: 37.7749,
-                      lng: -122.4194,
-                    },
-                    
-                  ],
+                  positions: this.state.alumni,
                   options: {
                     radius: 40,
                     opacity: 0.8,
@@ -102,7 +82,7 @@ class Map extends Component {
       </div>
 
             </div>
-            <div className="col-6">
+            <div className="col-4">
 
               <form action="POST" onSubmit={this.onSubmit}>
 
