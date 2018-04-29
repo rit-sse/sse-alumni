@@ -5,7 +5,7 @@ class Profiles extends Component {
 		return (
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4 p-0">
+					<div class="col-sm-4 p-0 d-flex align-items-stretch">
 						<div class="list-group">
 							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
 							<div class="d-flex w-100 justify-content-between">
@@ -33,7 +33,7 @@ class Profiles extends Component {
 							</a>
 						</div>
 					</div>
-					<div class="col-sm-8 p-0">
+					<div class="col-sm-8 p-0 d-flex align-items-stretch">
 						<div class="card">
 						  <div class="card-body">
 						  	<i class="fa fa-user text-dark fa-5x mb-2" aria-hidden="true"></i>
